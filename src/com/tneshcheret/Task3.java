@@ -18,18 +18,17 @@ public class Task3 {
 
         for (int i = 0; i < dividedString.length; i++) {
             char ch;
+            ch = dividedString[i].charAt(0);
+            ch = Character.toUpperCase(ch);
+            dividedString[i] = dividedString[i].replace(dividedString[i].charAt(0), ch);
+
             if (i == dividedString.length - 1) {
-                ch = dividedString[i].charAt(0);
-                ch = Character.toUpperCase(ch);
-                dividedString[i] = dividedString[i].replace(dividedString[i].charAt(0), ch);
                 unitedString.append(dividedString[i]);
             } else {
-                ch = dividedString[i].charAt(0);
-                ch = Character.toUpperCase(ch);
-                dividedString[i] = dividedString[i].replace(dividedString[i].charAt(0), ch);
                 unitedString.append(dividedString[i]).append(" ");
             }
         }
+
         printNormalizeString(unitedString);
     }
 
